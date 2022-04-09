@@ -11,5 +11,9 @@ variable "ec2_ami" {
 }
 
 variable "s3_bucket_name" {
- # default = "engin12-s3-bucket-variable-addwhateveryouwant"
+  default = "engin12-s3-bucket-variable-addwhateveryouwant"
+}
+
+variable "num_of_buckets" {
+  default = 2
 }
