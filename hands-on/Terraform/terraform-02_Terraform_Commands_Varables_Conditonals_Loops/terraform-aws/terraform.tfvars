@@ -1,1 +1,0 @@
-s3_bucket_name = "engin11-tfvar-bucket"
