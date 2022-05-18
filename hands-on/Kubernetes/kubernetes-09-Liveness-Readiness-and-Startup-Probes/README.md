@@ -310,7 +310,7 @@ if __name__== '__main__':
 - To try the startup check, create a Pod:
 
 ```bash
-kubectl apply -f startup-exec.yaml
+kubectl apply -f startup.yaml
 kubectl get po
 kubectl describe pod startup-http
 ```
@@ -320,7 +320,7 @@ kubectl describe pod startup-http
 - Delete the pod.
 
 ```bash
-kubectl delete -f http-liveness.yaml
+kubectl delete -f startup.yaml
 ```
 
 ## Part 4 - readinessProbe
