@@ -29,7 +29,3 @@ override.tf.json
 terraform.rc
 
 .terraform.lock.hcl
-
-*.pem
-awscliv2.zip
-ansible-infrastructure

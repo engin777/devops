@@ -19,7 +19,7 @@ provider "aws" {
 }
 
 locals {
-  user = "engin"
+  user = "walter"
 }
 
 
@@ -68,7 +68,7 @@ resource "null_resource" "config" {
     host = aws_instance.nodes[0].public_ip
     type = "ssh"
     user = "ec2-user"
-    private_key = file("C:/Users/kazar/Desktop/aws/${var.mykeypem}")
+    private_key = file("~/.ssh/${var.mykeypem}")
     # Do not forget to define your key file path correctly!
   }
 
@@ -79,7 +79,7 @@ resource "null_resource" "config" {
 
   provisioner "file" {
     # Do not forget to define your key file path correctly!
-    source = "C:/Users/kazar/Desktop/aws/${var.mykeypem}"
+    source = "~/.ssh/${var.mykeypem}"
     destination = "/home/ec2-user/${var.mykeypem}"
   }
 
