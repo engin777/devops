@@ -79,8 +79,11 @@ cd /root/.ssh
 
 - Open the "authorized_keys" file with an editor and paste the code that you copied from public key(id_rsa.pub). Save "authorized_keys" file.
 
+<<<<<<< HEAD
 nano authorized_keys ***eskiden yazan key var onu silme bir alt satıra yapıştır kopyaladığın keyi***
 
+=======
+>>>>>>> ffa95d0551d07ae11a234861bc24f29b503639b7
 - Get the slave node ip:
 
 ```bash
@@ -118,7 +121,11 @@ wget http://<jenkins_master_ip>:8080/jnlpJars/slave.jar
 - Enter `This is a linux slave node for jenkins` in the description field.
 
 - "Number of executors" is the maximum number of concurrent builds that Jenkins may perform on this node. Enter `2` in this field.
+<<<<<<< HEAD
 ***Jenkins master node executers "0" yapılması best practice ana server a yük binmemesi için****
+=======
+
+>>>>>>> ffa95d0551d07ae11a234861bc24f29b503639b7
 - An agent needs to have a directory dedicated to Jenkins. Specify the path to this directory on the agent. Enter `/usr/jenkins` in the "Remote root directory" field.
 
 - Enter `Linux` in the "Labels" field.
@@ -126,7 +133,10 @@ wget http://<jenkins_master_ip>:8080/jnlpJars/slave.jar
 - Select `Launch agent via execution of command on the master` from dropdown menu in the "Launch method" field.
 
 - Enter `ssh -i /var/lib/jenkins/.ssh/<the_key_file> root@<slave_ip> java -jar /root/bin/slave.jar` in the "Launch command" field.
+<<<<<<< HEAD
 ****<the_key_file> = id_rsa dosyası olacak <slave_ip> = slave private ip olacak***
+=======
+>>>>>>> ffa95d0551d07ae11a234861bc24f29b503639b7
 
 - Select `Keep this agent online as much as possible` from dropdown menu in the "Availability" field.
 
@@ -248,4 +258,8 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
+<<<<<<< HEAD
 - Back to the job tab and show the `Last Successful Artifacts : single-module-project.jar`
+=======
+- Back to the job tab and show the `Last Successful Artifacts : single-module-project.jar`
+>>>>>>> ffa95d0551d07ae11a234861bc24f29b503639b7
