@@ -18,11 +18,11 @@ provider "github" {
 data "aws_caller_identity" "current" {}
 
 locals {
-  github-email = "serdar@clarusway.com"                      # you need to change this line
-  github-username = "serdarcw"                              # you need to change this line
-  github-token = ""      # you need to change this line
-  key_pair=""            # you need to change this line
-  pem_key_address = "~/Downloads/serdar.pem"              # you need to change this line
+  github-email = "engkzr777@gmail.com"                      # you need to change this line
+  github-username = "engin777"                              # you need to change this line
+  github-token = "************"      # you need to change this line
+  key_pair="firstkey"            # you need to change this line
+  pem_key_address = "C:/Users/kazar/.ssh/firstkey.pem"              # you need to change this line
 }
 
 resource "github_repository" "githubrepo" {
@@ -114,7 +114,7 @@ resource "aws_instance" "jenkins-server" {
           amazon-linux-extras install docker -y
           systemctl start docker
           systemctl enable docker
-          # add ec2-user and jenkins users to docker group 
+          # add ec2-user and jenkins users to docker group 
           usermod -a -G docker ec2-user
           usermod -a -G docker jenkins
           # configure docker as cloud agent for jenkins
